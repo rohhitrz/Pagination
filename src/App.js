@@ -1,9 +1,10 @@
 import React from 'react';
-
+import PaginationComponent from './components/Pagination';
 function App() {
   return (
     <div className="App">
-      <h1>Employee Data</h1>
+      <PaginationComponent/>
+     
       
     </div>
   );
