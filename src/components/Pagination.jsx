@@ -11,7 +11,8 @@ const PaginationComponent = () => {
       try {
         const response = await fetch("https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json");
         if (!response.ok) {
-          throw new Error("problem in fetching data");
+          throw new Error("failed to fetch data");
+          alert("failed to fetch data");
         }
         const jsonResponse = await response.json();
         // console.log(jsonResponse);
@@ -19,7 +20,7 @@ const PaginationComponent = () => {
         setEmployee(jsonResponse);
       } catch (e) {
         console.error(e.message);
-        alert(e.message);
+        alert("failed to fetch data");
       }
     };
     fetchData();
